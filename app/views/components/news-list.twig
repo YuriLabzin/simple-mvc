@@ -1,0 +1,15 @@
+{% if (arItems) %}
+    <div class="news">
+        {% for item in arItems %}
+            <div class="news__item news-item">
+                <div class="news-item__top-line">
+                    <div class="news-item__date">{{ item.date }}</div>
+                    <h2 class="news-item__title">
+                        <a class="news-item__link" href="/news/detail/{{ item.id }}">{{ item.name }}</a>
+                    </h2>
+                </div>
+                <div class="news-item__text">{{ item.previewText }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

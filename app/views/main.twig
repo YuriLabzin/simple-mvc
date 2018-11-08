@@ -1,0 +1,96 @@
+{% extends "template.twig" %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block main %}
+    <section class="section about-work-section">
+        <div class="container">
+            <div class="section__wrap">
+                <h1 class="section__title">Простой MVC проект</h1>
+                <div class="about-work">
+                    <p>Роутинг:</p>
+                    <div class="compare-table">
+                        <div class="compare-table__row">
+                            <div class="compare-table__col">/news/</div>
+                        </div>
+                        <div class="compare-table__row">
+                            <div class="compare-table__col">/news/page/&lt;N&gt;</div>
+                        </div>
+                        <div class="compare-table__row">
+                            <div class="compare-table__col">/news/detail/&lt;id&gt;</div>
+                        </div>
+                    </div>
+                    <p>В приложении была реализована следующая структура:</p>
+                    <div class="project-tree">
+                        <div class="project-tree__node">
+                            <div class="project-tree__node-info">
+                                <div class="project-tree__node-name">app</div>
+                                <div class="project-tree__node-desc">Основная папка приложения</div>
+                            </div>
+                            <div class="project-tree__node">
+                                <div class="project-tree__node-info">
+                                    <div class="project-tree__node-name">Controllers</div>
+                                    <div class="project-tree__node-desc">Контроллеры приложения</div>
+                                </div>
+                            </div>
+                            <div class="project-tree__node">
+                                <div class="project-tree__node-info">
+                                    <div class="project-tree__node-name">Models</div>
+                                    <div class="project-tree__node-desc">Модели приложения</div>
+                                </div>
+                            </div>
+                            <div class="project-tree__node">
+                                <div class="project-tree__node-info">
+                                    <div class="project-tree__node-name">views</div>
+                                    <div class="project-tree__node-desc">Папка с шаблонами, реализуюшими отображение
+                                        (View)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-tree__node">
+                            <div class="project-tree__node-info">
+                                <div class="project-tree__node-name">cache</div>
+                                <div class="project-tree__node-desc">Папка с кешем страниц приложения</div>
+                            </div>
+                        </div>
+                        <div class="project-tree__node">
+                            <div class="project-tree__node-info">
+                                <div class="project-tree__node-name">classes</div>
+                                <div class="project-tree__node-desc">Папка с прочими классами приложения</div>
+                            </div>
+
+                            <div class="project-tree__node">
+                                <div class="project-tree__node-info">
+                                    <div class="project-tree__node-name">Core</div>
+                                    <div class="project-tree__node-desc">Основные классы, формирующие структуру
+                                        приложения
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-tree__node">
+                            <div class="project-tree__node-info">
+                                <div class="project-tree__node-name">public</div>
+                                <div class="project-tree__node-desc">Папка публичными ресурсами</div>
+                            </div>
+
+                            <div class="project-tree__node">
+                                <div class="project-tree__node-info">
+                                    <div class="project-tree__node-name">styles</div>
+                                    <div class="project-tree__node-desc">Стили приложения</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-tree__node">
+                            <div class="project-tree__node-info">
+                                <div class="project-tree__node-name">vendor</div>
+                                <div class="project-tree__node-desc">Пакеты, необходимы для работы приложения</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

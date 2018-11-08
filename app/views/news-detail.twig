@@ -1,0 +1,15 @@
+{% extends "template.twig" %}
+
+{% block title %}Новости{% endblock %}
+
+{% block main %}
+    <section class="section news-detail-section">
+        <div class="container">
+            <div class="section__wrap">
+                <h1 class="section__title">{{ arResult.name }}</h1>
+                <div class="news-detail">{{ arResult.detailText | raw }}</div>
+                <a href="/news/" class="show-all-news-btn">Все новости >></a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

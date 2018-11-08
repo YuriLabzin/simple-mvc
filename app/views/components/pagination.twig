@@ -1,0 +1,12 @@
+{% if (pagesCount) %}
+    <div class="pagination {{ advancedClass ? advancedClass : '' }}">
+        <div class="pagination__title">Страницы:</div>
+        <ul class="pagination__items">
+            {% for i in range(1, pagesCount) %}
+                <li class="pagination__item {{ currentPage == i ? 'pagination__item_active' : '' }}">
+                    <a href="/news/page/{{ i }}{{ getParams }}" class="pagination__link">{{ i }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}

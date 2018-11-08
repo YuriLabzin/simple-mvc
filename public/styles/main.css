@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #edefeb; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; }
+
+.container {
+  max-width: 1034px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.page-title {
+  text-align: center;
+  margin: 15px 0; }
+
+.section {
+  margin-top: 55px; }
+  .section__wrap {
+    background-color: #fff;
+    border: 1px #caccc9 solid;
+    padding: 22px 11px; }
+  .section__title {
+    font-size: 31px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    font-family: Helvetica, Arial, sans-serif; }
+
+.header {
+  width: 100%;
+  background-color: #5d1049;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  flex: 0 0 auto; }
+  .header__top-line {
+    height: 15px;
+    background-color: #4f053b; }
+
+.header-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.top-menu {
+  font-family: "Lucida Console", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  width: 100%;
+  height: 60px;
+  margin: 10px 0; }
+  .top-menu__item {
+    display: flex;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    flex-grow: 1;
+    position: relative;
+    background-color: #720d5d;
+    max-width: 120px;
+    width: 100%; }
+    .top-menu__item:not(:last-child) .top-menu__link:after {
+      content: '';
+      display: block;
+      border-right: 2px #fff solid;
+      margin-left: 5px;
+      height: 25px;
+      position: absolute;
+      right: -1px;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%); }
+    .top-menu__item :hover {
+      background-color: #ffffff;
+      color: #4f053b;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
+    .top-menu__item_active {
+      background-color: rgba(255, 255, 255, 0.2); }
+  .top-menu__link {
+    width: 100%;
+    height: 40px;
+    color: inherit;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.footer {
+  background-color: #242424;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  flex: 0 0 auto; }
+  .footer__copyright {
+    color: #fff; }
+
+.news-list__pagination {
+  margin-top: 10px; }
+
+.news {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px #832b5b dotted;
+  border-bottom: 1px #832b5b dotted;
+  padding: 25px 0; }
+
+.news-item {
+  font-family: Helvetica, Arial, sans-serif; }
+  .news-item:not(:first-child) {
+    margin-top: 18px; }
+  .news-item__top-line {
+    display: flex; }
+  .news-item__date {
+    max-width: 82px;
+    width: 100%;
+    height: 19px;
+    background-color: #832b5b;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace; }
+  .news-item__title {
+    margin-left: 5px;
+    color: #0006f2;
+    font-weight: normal;
+    line-height: 16px;
+    font-size: 14px;
+    letter-spacing: 0.2px; }
+  .news-item__link {
+    color: inherit;
+    text-decoration: underline; }
+  .news-item__text {
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 15px; }
+
+.pagination {
+  font-family: Helvetica, Arial, sans-serif; }
+  .pagination__title {
+    font-weight: bold; }
+  .pagination__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3px; }
+  .pagination__item {
+    max-width: 32px;
+    width: 100%;
+    height: 18px;
+    margin-right: 3px;
+    margin-top: 3px;
+    border: 1px #caccc9 solid;
+    background-color: #edefeb;
+    color: black; }
+    .pagination__item:hover {
+      background-color: #832b5b;
+      color: #fff; }
+    .pagination__item:last-child {
+      margin-right: 0; }
+    .pagination__item_active {
+      background-color: #832b5b;
+      color: #fff;
+      cursor: default; }
+  .pagination__link {
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px; }
+
+.sort-filter {
+  border-top: 1px #242424 solid;
+  border-bottom: 1px #242424 solid;
+  padding: 15px 20px;
+  margin: 15px 0;
+  font-family: Helvetica, Arial, sans-serif; }
+  .sort-filter__select {
+    height: 30px;
+    padding-left: 5px; }
+    .sort-filter__select:focus {
+      outline: none; }
+  .sort-filter__option {
+    padding: 15px 0; }
+  .sort-filter__btn {
+    cursor: pointer;
+    height: 30px;
+    background-color: #832b5b;
+    color: #fff;
+    border: 1px #50183a solid;
+    transition: 0.2ms;
+    font-weight: bold; }
+    .sort-filter__btn:hover {
+      transform: scale(1.01);
+      border: 1px #50183a dashed;
+      background-color: #fff;
+      color: #4f053b; }
+    .sort-filter__btn:focus {
+      outline: none; }
+
+.news-detail {
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px #832b5b dotted;
+  border-bottom: 1px #832b5b dotted;
+  padding: 10px 0;
+  margin-top: 10px; }
+
+.show-all-news-btn {
+  margin-top: 10px;
+  display: block;
+  text-decoration: underline;
+  color: #58198a; }
+
+.about-work {
+  font-family: Helvetica, Arial, sans-serif; }
+  .about-work a {
+    text-decoration: underline;
+    color: #58198a; }
+
+.compare-table {
+  max-width: 400px;
+  width: 100%;
+  border: 1px #caccc9 solid;
+  padding: 15px; }
+  .compare-table__row {
+    display: flex;
+    border-bottom: 1px #242424 solid;
+    padding: 10px 0; }
+  .compare-table__col {
+    flex: 1; }
+    .compare-table__col:first-child {
+      font-weight: bold; }
+
+.project-tree {
+  max-width: 600px;
+  width: 100%;
+  border: 1px #caccc9 solid;
+  padding: 15px; }
+  .project-tree__node > .project-tree__node {
+    margin-left: 15px; }
+  .project-tree__node-info {
+    display: flex; }
+  .project-tree__node-name {
+    font-weight: bold;
+    flex: 1;
+    margin-right: 15px; }
+  .project-tree__node-desc {
+    flex: 5;
+    text-transform: lowercase; }
+    .project-tree__node-desc:before {
+      content: '-';
+      margin-right: 5px; }
+
+/*# sourceMappingURL=main.css.map */

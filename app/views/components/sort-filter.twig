@@ -1,0 +1,10 @@
+<form class="sort-filter" method="get" action="">
+    <label class="sort-filter__label">
+        <span class="sort-filter__name">Сортировать по:</span>
+        <select class="sort-filter__select" name="sort" title="Сортировать по">
+            <option class="sort-filter__option" value="DESC" {{ sort == 'DESC' ? 'selected' : '' }}>Убыванию</option>
+            <option class="sort-filter__option" value="ASC" {{ sort == 'ASC' ? 'selected' : '' }}>Возрастанию</option>
+        </select>
+    </label>
+    <input class="sort-filter__btn" type="submit" value="Обновить">
+</form>

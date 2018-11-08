@@ -1,0 +1,29 @@
+{% extends "template.twig" %}
+
+{% block title %}Новости{% endblock %}
+
+{% block main %}
+    <section class="section news-section">
+        <div class="container">
+            <div class="section__wrap">
+                <h2 class="section__title">Новости</h2>
+                {% if((arResult)) %}
+                    <div class="news-list">
+                        {% include "components/sort-filter.twig"  with {
+                            sort: arResult.sort
+                        } %}
+                        {% include "components/news-list.twig" with {
+                            arItems: arResult.items
+                        } %}
+                        {% include "components/pagination.twig" with {
+                            pagesCount: arResult.pagesCount,
+                            currentPage: arResult.currentPage,
+                            advancedClass: 'news-list__pagination',
+                            getParams: arResult.getParams
+                        } %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
